@@ -15,7 +15,7 @@ public class FacebookPage {
     @FindBy(xpath = "//button[@title='Only allow essential cookies']")
     public WebElement cookiesKabulButonu;
 
-    @FindBy(xpath = "//input[@placeholder='Email address or phone number']")
+    @FindBy(xpath = "//input[@placeholder='Email or phone number']")
     public WebElement emailKutusu;
 
     @FindBy(xpath = "//input[@placeholder='Password']")
