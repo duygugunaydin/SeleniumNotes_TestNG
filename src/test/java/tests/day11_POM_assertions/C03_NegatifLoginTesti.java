@@ -2,12 +2,10 @@ package tests.day11_POM_assertions;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.AmazonPage;
 import pages.QdPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-
-import java.awt.dnd.DragGestureEvent;
+import utilities.ReusableMethods;
 
 public class C03_NegatifLoginTesti {
 
@@ -20,10 +18,12 @@ public class C03_NegatifLoginTesti {
 
     QdPage qdPage= new QdPage();
 
-    @Test
+    @Test(groups = "smoke")
     public void negatifLogin1(){
-
+        ReusableMethods.bekle(3);
+        qdPage= new QdPage();
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
+        qdPage.cookieAcceptButonu.click();
         qdPage.ilkLoginLinki.click();
         qdPage.emailKutusu.sendKeys(ConfigReader.getProperty("qdGecerliUsername"));
         qdPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecersizPassword"));
@@ -34,10 +34,11 @@ public class C03_NegatifLoginTesti {
     }
 
 
-    @Test
+    @Test(groups = {"smoke","mr1"})
     public void negatifLogin2(){
         qdPage= new QdPage();
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
+        qdPage.cookieAcceptButonu.click();
         qdPage.ilkLoginLinki.click();
         qdPage.emailKutusu.sendKeys(ConfigReader.getProperty("qdGecersizUsername"));
         qdPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecerliPassword"));
@@ -51,6 +52,7 @@ public class C03_NegatifLoginTesti {
     public void negatifLogin3(){
         qdPage= new QdPage();
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
+        qdPage.cookieAcceptButonu.click();
         qdPage.ilkLoginLinki.click();
         qdPage.emailKutusu.sendKeys(ConfigReader.getProperty("qdGecersizUsername"));
         qdPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecersizPassword"));

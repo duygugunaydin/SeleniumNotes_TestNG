@@ -15,7 +15,7 @@ public class C04_HardAssert_SoftAssert {
 
         Assert.assertEquals(5,9);
 
-        Assert.assertNotEquals(6,6);
+        Assert.assertNotEquals(6,6);   // >> Bilerek FAILED yapildi
     }
 
     @Test
@@ -52,6 +52,6 @@ public class C04_HardAssert_SoftAssert {
 
 
 
-        softAssert.assertAll();
+        softAssert.assertAll(); // >> Bilerek FAILED yapildi
     }
 }

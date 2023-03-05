@@ -27,5 +27,7 @@ public class QdPage {
     @FindBy(xpath = "//a[text()='Instructor']")
     public WebElement basariliGirisElementi;
 
+    @FindBy(xpath = "//a[@onclick='cookieAccept();']")
+    public WebElement cookieAcceptButonu;
 
 }
