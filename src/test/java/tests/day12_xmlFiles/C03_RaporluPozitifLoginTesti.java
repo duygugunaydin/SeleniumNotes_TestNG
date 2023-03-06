@@ -20,7 +20,8 @@ public class C03_RaporluPozitifLoginTesti extends TestBaseRapor {
         QdPage qdPage= new QdPage();
         qdPage.ilkLoginLinki.click();
         extentTest.info("Ilk login linkine tiklandi");
-
+        qdPage.cookieAcceptButonu.click();
+        extentTest.info("Cookie'ler kabul edildi.");
         // gecerli kullanici adi ve password ile giris yapin
         qdPage.emailKutusu.sendKeys(ConfigReader.getProperty("qdGecerliUsername"));
         extentTest.info("Gecerli email yazildi");
